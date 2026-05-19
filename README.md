@@ -62,9 +62,7 @@ whiskeys-bistro-fullstack/
 
 ## Setup Instructions
 
-### 1. Copy Images
 
-Copy the `public/Img/` folder from your original HW3 project into this project's `public/` directory. The menu item images, gallery photos, and hero images must be in place for the UI to display correctly.
 
 ### 2. Create `.env` File
 
@@ -144,22 +142,5 @@ npm run build    # Vite builds to dist/
 npm start        # Express serves dist/ + API on PORT
 ```
 
-### Deploy to Render (Recommended)
 
-1. Push to GitHub
-2. Create a new **Web Service** on [render.com](https://render.com)
-3. Set **Build Command**: `npm install && npm run build`
-4. Set **Start Command**: `npm start`
-5. Add environment variables: `MONGODB_URI`, `PORT`, `CLIENT_URL`
 
-The Express server serves the Vite production build from `dist/` and handles API routes — one service, one deployment.
-
-## Demo Checklist
-
-For your project demo video, show:
-
-- [ ] App loading menu items from MongoDB (browser Network tab → `GET /api/menu`)
-- [ ] Adding items to cart, adjusting quantities
-- [ ] Placing an order (Network tab → `POST /api/orders`)
-- [ ] MongoDB Atlas dashboard showing the new order document
-- [ ] (Bonus) Using Postman/curl to hit CRUD endpoints directly
