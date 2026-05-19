@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body bg-bistro-bg text-bistro-ink antialiased;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar       { width: 7px; }
+  ::-webkit-scrollbar-track { background: #D6E9F8; }
+  ::-webkit-scrollbar-thumb { background: #5B9AC9; border-radius: 10px; }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-block font-body font-bold text-base px-8 py-3 rounded-full text-white
+           bg-gradient-to-br from-bistro-goldLite to-bistro-gold shadow-gold
+           transition-transform duration-200 hover:-translate-y-0.5
+           hover:shadow-[0_10px_28px_rgba(200,147,58,0.55)];
+  }
+  .btn-blue {
+    @apply inline-block font-body font-bold text-base px-8 py-3 rounded-full
+           bg-bistro-blueLite text-bistro-blue border-2 border-bistro-blueSoft
+           transition-transform duration-200 hover:-translate-y-0.5 hover:bg-bistro-blueSoft hover:text-white;
+  }
+  .section-tag {
+    @apply text-xs font-bold tracking-[0.1em] uppercase text-bistro-gold mb-2;
+  }
+  .section-title {
+    @apply font-display text-bistro-ink leading-tight;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  .section-title em {
+    @apply text-bistro-blue not-italic;
+    font-style: italic;
+  }
+  .divider {
+    @apply rounded-full;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #F0C060, #5B9AC9);
+    margin: 1rem 0 2.5rem 0;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "whiskeys-bistro-fullstack",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Whiskey's Bistro — Full-stack (React + Tailwind + Express + MongoDB)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "server:dev": "nodemon server/index.js",
+    "dev:full": "concurrently \"npm run server:dev\" \"npm run dev\"",
+    "seed": "node server/seed.js",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "vite": "^5.4.11"
+  }
+}
